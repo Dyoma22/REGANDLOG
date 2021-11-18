@@ -8,6 +8,10 @@ while True:
     if v==1:
         print("Registreerimine")
         #
+        #log=...
+        #pas=...
+        users.append(log)
+        passwords.append(pas)
     elif v==2:
         print("Avtoriseerimine")
         #

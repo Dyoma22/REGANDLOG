@@ -1,9 +1,9 @@
 import random
 #Cоздаем функции
 def passautomat()->str:
-	"""Пароль создается машиной
+	"""
 	"""	
-	str0=".,:;!_*-+()/#¤%&"
+	str0=".,_"
 	str1 = '0123456789'
 	str2 = 'qwertyuiopasdfghjklzxcvbnm'
 	str3 = str2.upper() # 'QWERTYUIOPASDFGHJKLZXCVBNM'
