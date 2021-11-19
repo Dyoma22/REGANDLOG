@@ -1,11 +1,11 @@
 import random
 #Cоздаем функции
 def passautomat()->str:
-	"""Пароль создается машиной
+	"""Parool genereeritakse masinaga
 	"""	
-	str0=".,:;!_*-+()/#¤%&"
-	str1 = '0123456789'
-	str2 = 'qwertyuiopasdfghjklzxcvbnm'
+	str0 = ".,_"
+	str1 = "0123456789"
+	str2 = "qwertyuiopasdfghjklzxcvbnm"
 	str3 = str2.upper() # 'QWERTYUIOPASDFGHJKLZXCVBNM'
 	str4 = str0+str1+str2+str3
 	ls = list(str4) # список [".",",",":"...]
@@ -21,7 +21,7 @@ def paskontroll(psword: str)->bool:
 		if e.isalpha(): a=True
 		if e.isupper(): u=True
 		if e.islower():l=True
-		if e in list(".,:;!_*-+()/#¤%&"): s=True
+		if e in list(".,_"): s=True
 	if d==True and a==True and u==True and l==True and s==True:
 		t=True
 	else:
