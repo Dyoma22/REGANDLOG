@@ -1,5 +1,5 @@
-import random
-#Cîçäàåì ôóíêöèè
+from random import* 
+
 def passautomat()->str:
 	"""Parool genereeritakse masinaga
 	"""	
@@ -8,12 +8,11 @@ def passautomat()->str:
 	str2 = "qwertyuiopasdfghjklzxcvbnm"
 	str3 = str2.upper() # 'QWERTYUIOPASDFGHJKLZXCVBNM'
 	str4 = str0+str1+str2+str3
-	ls = list(str4) # ñïèñîê [".",",",":"...]
-	random.shuffle(ls) #ïåğåìåøàåì
-# Èçâëåêàåì èç ñïèñêà 12 ïğîèçâîëüíûõ çíà÷åíèé
+	ls = list(str4)#ÑĞ¿Ğ¸ÑĞ¾Ğº ÑĞ¸Ğ¼Ğ²Ğ¾Ğ»Ñ‹ Ğ²Ñ‹ÑˆĞµ Ğ±ÑƒĞ´ÑƒÑ‚ Ğ² ÑĞ¿Ğ¸ÑĞºĞµ
+	random.shuffle(ls)#Ğ¿ĞµÑ€ĞµĞ¼ĞµÑˆĞ¸Ğ²Ğ°ĞµÑ‚ Ğ·Ğ½Ğ°Ñ‡ĞµĞ½Ğ¸Ğµ 
 	psword = ''.join([random.choice(ls) for x in range(12)])
-# Ïàğîëü ãîòîâ
-	return psword
+	return psword #Ğ¿Ğ°Ñ€Ğ¾Ğ»ÑŒ Ğ³Ğ¾Ñ‚Ğ¾Ğ²
+
 def paskontroll(psword: str)->bool:
 	ls=list(psword)
 	for e in ls:
@@ -27,3 +26,10 @@ def paskontroll(psword: str)->bool:
 	else:
 		t=False
 	return t
+def koik_kasutajad(users,passwords):
+	i=0
+	for user in users:
+		print(user,end="-")
+		print(passwords[i])
+		i+=1
+
