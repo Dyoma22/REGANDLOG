@@ -1,9 +1,11 @@
 ﻿from Funktsioonid import *
-users=["Demid"]
-passwords=["12345"]
 
+users=loe_failist_listisse("users.txt")
+passwords=loe_failist_listisse("passwords.txt")
+print(users)
+print(passwords)
 while True:
-	print("Reg-1,Avt-2,Välja-3")
+	print("Reg - 1,Arv - 2,Välja - 3")
 	v=int(input())
 	if v==0:
 		koik_kasutajad(users,passwords)		
@@ -30,10 +32,12 @@ while True:
 					
 	elif v==2:
 		print("Avtoriseerimine")
-		#
+		if passwords.index(pas)==users.index(user):		
 	elif v==3:
 		print("Välja")
-		break
+		faili_sisu_umberkirjutamine("users.txt",users)
+		faili_sisu_umberkirjutamine("passwords.txt",passwords)
+		quit()
 		#valmis
 	else:
 		print("On vaja valida 1,2 või 3")# kõik on olemas

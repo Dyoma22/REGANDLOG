@@ -1,5 +1,20 @@
 from random import* 
 
+def loe_failist_listisse(file:str)->list:
+    """Loeme tekst failist ja salvesta järjendisse
+    """
+    f=open(file, "r")
+    list_=[]
+    for stroka in f:
+        list_.append(stroka.strip())
+    f.close()
+    return list_
+
+def faili_sisu_umberkirjutamine(file:str,list_:list):
+    with open(file, "w") as f:
+		for slovo in list_:
+			f.write(slovo+"\n")
+
 def passautomat()->str:
 	"""Parool genereeritakse masinaga
 	"""	
